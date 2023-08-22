@@ -1,7 +1,7 @@
 import { MdHubNotInitializedError } from '../errors'
 import { Workplace } from 'src/domain/Workplace'
 
-export default async function setMemedPatient(workplace: Workplace): Promise<void> {
+export default async function setMemedWorkplace(workplace: Workplace): Promise<void> {
   if (!('MdHub' in window)) {
     throw MdHubNotInitializedError
   }
