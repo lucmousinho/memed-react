@@ -1,5 +1,6 @@
 export { default as createMemedScript } from './createMemedScript'
 export { default as setMemedPatient } from './setMemedPatient'
+export { default as setMemedWorkplace } from './setMemedWorkplace'
 export { default as disableSensitiveCommands } from './disableSensitiveCommands'
 export { default as onLoadPrescription } from './onLoadPrescription'
 export { default as showPrescription } from './showPrescription'

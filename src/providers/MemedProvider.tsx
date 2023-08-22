@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { ModuleOptions, Patient } from '../domain'
+import { ModuleOptions, Patient, Workplace } from '../domain'
 import { useScriptLoader, useSetupCommands, useActionButtonBind, useSetupPatient } from '../hooks'
 import MemedContext from '../contexts/MemedContext'
 
@@ -23,6 +23,7 @@ export default function MemedProvider(props: MemedContextProviderProps): React.R
 
   const [doctorToken, setDoctorToken] = React.useState('')
   const [patient, setPatient] = React.useState<Patient>()
+  const [workplace, setWorkplace] = React.useState<Workplace>()
   const [actionRef, setActionRef] = React.useState<React.RefObject<HTMLButtonElement>>()
   const [options, setOptions] = React.useState<ModuleOptions>()
 
@@ -51,6 +52,7 @@ export default function MemedProvider(props: MemedContextProviderProps): React.R
     () => ({
       setDoctorToken,
       setPatient,
+      setWorkplace,
       setActionRef,
       onLogout,
       loadingModule,
