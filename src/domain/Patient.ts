@@ -7,6 +7,6 @@ export interface Patient {
   altura?: number
   idExterno: string
   cpf: string
-  withoutCpf: boolean
+  withoutCpf?: boolean
   data_nascimento?: string
 }
