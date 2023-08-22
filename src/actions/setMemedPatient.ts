@@ -6,7 +6,7 @@ export default async function setMemedPatient(patient: Patient): Promise<void> {
     throw MdHubNotInitializedError
   }
 
-  const { nome, endereco, cidade, telefone, peso, altura, idExterno } = patient
+  const { nome, endereco, cidade, telefone, peso, altura, idExterno, cpf, withoutCpf, data_nascimento } = patient
   await window.MdHub.command.send('plataforma.prescricao', 'setPaciente', {
     nome,
     endereco,
@@ -14,6 +14,9 @@ export default async function setMemedPatient(patient: Patient): Promise<void> {
     telefone,
     peso,
     altura,
-    idExterno
+    idExterno,
+    cpf,
+    withoutCpf,
+    data_nascimento
   })
 }
